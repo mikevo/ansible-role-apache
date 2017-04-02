@@ -3,3 +3,8 @@
   service:
     name: "{{ apache_service }}"
     state: "{{ apache_restart_state }}"
+    
+- name: restart firewalld
+  service:
+    name: "{{ firewall_service }}"
+    state: restarted
